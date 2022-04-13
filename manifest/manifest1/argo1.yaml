@@ -5,13 +5,13 @@ metadata:
   labels:
     app.kubernetes.io/name: applications.argoproj.io
     app.kubernetes.io/part-of: argocd
-  name: applications.argoproj.ioo
+  name: applications-1.argoproj.io-1
 spec:
-  group: argoproj.io
+  group: argoproj.io-1
   names:
     kind: Application
     listKind: ApplicationList
-    plural: applications
+    plural: applications-1
     shortNames:
     - app
     - apps
@@ -2155,13 +2155,13 @@ kind: CustomResourceDefinition
 metadata:
   labels:
     app.kubernetes.io/name: applicationsets.argoproj.io
-  name: applicationsets.argoproj.ioo
+  name: applicationsets-1.argoproj.io-1
 spec:
-  group: argoproj.io
+  group: argoproj.io-1
   names:
     kind: ApplicationSet
     listKind: ApplicationSetList
-    plural: applicationsets
+    plural: applicationsets-1
     shortNames:
     - appset
     - appsets
@@ -8671,13 +8671,13 @@ metadata:
   labels:
     app.kubernetes.io/name: appprojects.argoproj.io
     app.kubernetes.io/part-of: argocd
-  name: appprojects.argoproj.ioo
+  name: appprojects-1.argoproj.io-1
 spec:
-  group: argoproj.io
+  group: argoproj.io-1
   names:
     kind: AppProject
     listKind: AppProjectList
-    plural: appprojects
+    plural: appprojects-1
     shortNames:
     - appproj
     - appprojs
