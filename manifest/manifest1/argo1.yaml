@@ -2155,7 +2155,7 @@ kind: CustomResourceDefinition
 metadata:
   labels:
     app.kubernetes.io/name: applicationsets.argoproj.io
-  name: applicationsets.argoproj.io-1
+  name: applicationsets.argoproj.ioo
 spec:
   group: argoproj.io
   names:
@@ -8671,7 +8671,7 @@ metadata:
   labels:
     app.kubernetes.io/name: appprojects.argoproj.io
     app.kubernetes.io/part-of: argocd
-  name: appprojects.argoproj.io
+  name: appprojects.argoproj.ioo
 spec:
   group: argoproj.io
   names:
