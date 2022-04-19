@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namePrefix: 6j-
+
+resources: 
+- layer5a
+- layer5b
+- layer5c
+- layer5d
+- layer5e
+- layer5f
+- layer5g
+- layer5h
+- layer5i
+- layer5j

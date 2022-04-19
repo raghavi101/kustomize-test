@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: new10k-kustomize
+  name: layer5
   namespace: argocd
 spec:
   project: default
@@ -13,4 +13,3 @@ spec:
     server: https://kubernetes.default.svc
     namespace: argocd
 
-  
