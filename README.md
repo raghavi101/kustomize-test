@@ -8,7 +8,7 @@ How many is large? Thousands? Tens of thousands? How large can it go before Argo
 ## Steps
 1. Clone this repository 
 ```
-git clone https://github.com/raghavi101/kustomize-test
+git clone https://github.com/raghavi101/kustomize-test.git
 ```
 2. Aquire a cluster (minikube/oc etc), be sure that a ``metrics-server`` is configured within the kube-system namespace. If not then run the following command :
 ```
