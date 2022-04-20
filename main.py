@@ -1,3 +1,14 @@
+# This script's purpose is to generate a hierarchical file structure as follows : 
+# Each of these dir 1a, 1b, 1c, 1d, 1e, 1f, 1g, 1h, 1i, 1j contain a kustomization.yaml and a dep.yaml
+# Each of these dir 2a . . . 2j contain 1a . . . 1j 
+#                 layer5
+#        /  /  /   / | \  \  \  \  \    
+#       4a 4b 4c 4d 4e 4f 4g 4h 4i 4j
+#        .  .  .  .  .  .  .  .  .  . 
+#        .  .  .  .  .  .  .  .  .  . 
+#        .  .  .  .  .  .  .  .  .  . 
+#       1a-1j.......................1a-1j
+
 import os
 
 def create_yaml(path, resource):
@@ -16,5 +27,5 @@ def burst(path: str, n: int):
 
     create_yaml(path, "\n".join([f"- layer{n}{i}" for i in "abcdefghij"]))
 
-os.mkdir("layer10")
-burst("layer10", 9)
+os.mkdir("layer5")
+burst("layer5", 4)
