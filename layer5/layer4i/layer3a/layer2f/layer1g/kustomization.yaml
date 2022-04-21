@@ -3,4 +3,4 @@ kind: Kustomization
 namePrefix: 1g-
 
 resources: 
-- manifests/dep.yaml
+- https://github.com/raghavi101/kustomize-test/blob/master/manifests/dep.yaml
