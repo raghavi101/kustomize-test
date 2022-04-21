@@ -3,4 +3,4 @@ kind: Kustomization
 namePrefix: 1a-
 
 resources: 
-- dep.yaml
+- manifests/dep.yaml
