@@ -12,7 +12,7 @@ git clone https://github.com/raghavi101/kustomize-test.git
 ```
 2. Aquire a cluster (minikube/oc etc), be sure that a ``metrics-server`` is configured within the kube-system namespace. If not then run the following command :
 ```
-kubectl apply -f https://raw.githubusercontent.com/raghavi101/kustomize-test/master/components.yaml
+https://raw.githubusercontent.com/raghavi101/kustomize-test/master/manifests/components.yaml
 ```
 3. At the root of the cloned repository run the shell script 
 #### NOTE :  'argocd' namespace will be recreated afresh. Running deployments will be disgarded.
