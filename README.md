@@ -10,11 +10,9 @@ How many is large? Thousands? Tens of thousands? How large can it go before Argo
 ```
 git clone https://github.com/raghavi101/kustomize-test.git
 ```
-2. Aquire a cluster (minikube/oc etc), be sure that a ``metrics-server`` is configured within the kube-system namespace. If not then run the following command :
-```
-https://raw.githubusercontent.com/raghavi101/kustomize-test/master/manifests/components.yaml
-```
-3. At the root of the cloned repository run the shell script 
+2. Aquire a cluster (minikube/oc etc).
+
+4. At the root of the cloned repository run the shell script 
 #### NOTE :  'argocd' namespace will be recreated afresh. Running deployments will be disgarded.
  ```
  ./script.sh
