@@ -1,8 +1,26 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-kubectl delete namespace argocd
-kubectl create namespace argocd 
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml 
+set -e
+if ! [ -x "$(command -v kubectl)" ]; then
+  echo 'Error: kubectl is not installed.' >&2
+  exit 1
+fi
+
+if ! [ -x "$(command -v jq)" ]; then
+  echo 'Error: jq is not installed.' >&2
+  exit 1
+fi
+
+namespaceStatus=$(kubectl get ns argocd -o json | jq .status.phase -r)
+if [ "$namespaceStatus" == "Active" ]
+then
+  kubectl delete namespace argocd 
+  kubectl create namespace argocd
+else
+  kubectl create namespace argocd
+fi
+kubectl apply -n argocd -f manifests/argo.yaml 
+kubectl apply -n kube-system -f manifests/components.yaml
 
 tput setaf 3; echo "Waiting for ArgoCD to start . . ." ; tput sgr0
 
@@ -12,8 +30,8 @@ for resource in ${Resources[*]}; do
 done
 
 tput setaf 2; echo "Creating application . . ." ; tput sgr0
-sleep 10;
-kubectl apply -n argocd -f https://raw.githubusercontent.com/raghavi101/kustomize-test/master/application.yaml
+
+kubectl apply -n argocd -f ./application.yaml
 
 tput setaf 6; echo "Loading metrics . . ."; tput sgr0
 sleep 200

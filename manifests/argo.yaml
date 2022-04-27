@@ -9947,7 +9947,7 @@ spec:
         - argocd-redis:6379
         env:
         - name: ARGOCD_EXEC_TIMEOUT
-          value: "90m"
+          value: "10m"
         - name: ARGOCD_RECONCILIATION_TIMEOUT
           valueFrom:
             configMapKeyRef:
