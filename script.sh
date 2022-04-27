@@ -36,6 +36,7 @@ kubectl apply -n argocd -f ./application.yaml
 tput setaf 6; echo "Loading metrics . . ."; tput sgr0
 sleep 200
 tput setaf 6; echo "Error statements regarding metrics unavailability can be ignored"; tput sgr0
+set +e
 while true; do kubectl top pods -n argocd; tput setaf 6; date; tput sgr0; sleep 20; done;
 
 
